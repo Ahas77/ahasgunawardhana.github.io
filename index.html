@@ -10,11 +10,11 @@
     <nav class="navbar">
         <div class="logo">AG</div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-icons">
             <button class="theme-toggle" id="themeToggle">
@@ -31,25 +31,361 @@
             <a href="https://www.instagram.com/___ahas____/" target="_blank"><img src="instagram.svg" alt="Instagram"></a>
         </div>
     </nav>
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Hello, I'm <span>Ahas Gunawardhana</span></h1>
-            <h2><span class="highlight" id="shuffleText">Software Engineer</span></h2>
-            <p>
-                IT undergraduate | Passionate web developer with hands-on experience in modern web technologies | Eager to contribute and grow through an IT-related internship opportunity.
-            </p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ahas-gunawardhana-1266702b3/" target="_blank"><img src="linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://github.com/Ahas77" target="_blank"><img src="github.svg" alt="GitHub"></a>
-                <a href="https://web.facebook.com/ahas.gunawardhana" target="_blank"><img src="facebook.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/___ahas____/" target="_blank"><img src="instagram.svg" alt="Instagram"></a>
+            <div class="hero-text">
+                <h1>Hello, I'm Ahas Gunawardhana</h1>
+                <h2><span class="highlight" id="shuffleText">Software Engineer</span></h2>
+                <p>IT undergraduate | Passionate web developer with hands-on experience in modern web technologies | Eager to contribute and grow through an IT-related internship opportunity.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Ahas77" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahas-gunawardhana-1266702b3/" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://web.facebook.com/ahas.gunawardhana" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/___ahas____/" target="_blank" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="download-cv-container">
+                    <a href="Ahas Gunawardhana CV.pdf" class="download-btn" download>Download CV</a>
+                </div>
             </div>
-            <a href="Ahas Gunawardhana CV.pdf" class="download-btn" download>Download CV</a>
-        </div>
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Profile" />
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="profile.jpg" alt="Ahas Gunawardhana" class="profile-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
         </div>
     </section>
+    
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <p class="section-description">My educational journey, with details about the places I studied in and brief summary of what I learned.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>BSc.(Hons) in Information Technology(Reading)</h3>
+                            <div class="timeline-date">
+                                <i class="calendar-icon">📅</i>
+                                <span>2023 May - Present</span>
+                            </div>
+                        </div>
+                        <div class="timeline-institution">Faculty of Computing, Sri Lanka Institute of Information Technology</div>
+                        <p class="timeline-description">Final-year undergraduate with hands-on experience in software development, Skilled in problem-solving and modern computing technologies, with a strong foundation in academic research and practical applications.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>GCE A/L (Physical Science)</h3>
+                            <div class="timeline-date">
+                                <i class="calendar-icon">📅</i>
+                                <span>2018-2020</span>
+                            </div>
+                        </div>
+                        <div class="timeline-institution">Maliyadeva College, Kurunegala</div>
+                        <div class="timeline-grades">
+                            <span>Physics - S</span>
+                            <span>Chemistry - C</span>
+                            <span>Combined Mathematics - C</span>
+                            <span>General English - C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-description">A comprehensive overview of my technical abilities and expertise in various technologies and tools.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Eclipse IDE</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Visual Studio Code</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Design Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-description">A showcase of my recent work including web applications and academic group projects.</p>
+            
+            <div class="projects-grid">
+                <!-- Project Card 1: Savendra Gardens -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="savendra-gardens.jpg" alt="Savendra Gardens Hotel Reservation System">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>LUXURY LIVING</h4>
+                                <p>YOUR NEXT ADVENTURE STARTS WITH THE RIGHT ROOM</p>
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/Ahas77/HotelReservationManagementSystem" target="_blank" class="overlay-btn">
+                                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Willow Lake</h3>
+                        <p>Willow Lake is a PHP-based hotel reservation system with HTML, CSS, JS, and MySQL. Guests can view rooms, check availability, book stays, and leave reviews. Admins can manage rooms, bookings, and customer data via a secure dashboard.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">XAMPP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: ScholaHub -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="scholahub.jpg" alt="ScholaHub School Information System">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Please Welcome to ScholaHub</h4>
+                                <p>Your Gateway to Quality Education Future Today.</p>
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/Ahas77/SchoolInformationManagementSystem" target="_blank" class="overlay-btn">
+                                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ScholaHub</h3>
+                        <p>School Information Java-based web project that student and teachers can maintain their profiles by themselves. Students can get the notices and marks by the web site as well as admin side can handle tasks of the system.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">JSP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Tomcat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: SportsZaga -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="sportszaga.jpg" alt="SportsZaga Sports Equipment Management">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <h4>Where Passion Meets the Game.</h4>
+                                <div class="overlay-buttons">
+                                    <a href="https://github.com/Ahas77/Sports-Zaga" target="_blank" class="overlay-btn">
+                                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SportsZaga</h3>
+                        <p>SportsZaga is a full-stack MERN app where users can buy, rent, repair, and customize sports items with secure payments. Includes JWT auth, user profiles, reviews (CRUD), and an admin dashboard to manage everything and generate PDF reports.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">MongoDB</span>
+                            <span class="project-tag">JWT</span>
+                            <span class="project-tag">MERN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-projects">
+                <a href="https://github.com/Ahas77" target="_blank" class="view-all-btn">
+                    <span>View All Projects</span>
+                    <i class="code-icon">💻</i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-description">Have a question or want to work together? Drop me a message and I'll get back to you!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:ahagunwardhana@gmail.com" class="contact-link">ahagunwardhana@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+97775697140" class="contact-link">+97 775697140</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>No 406/1, Karandagolla, Ambakotte, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.4918401!2d80.4536063!3d7.4918401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3478b8caab449%3A0x9c328790d8b254c2!2sKarandagolla-%20Ambakote%20Rd!5e0!3m2!1sen!2slk!4v1704064000000!5m2!1sen!2slk"
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: 12px; margin-top: 1rem;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <svg class="send-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p>©2025 Ahas Gunawardhana. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/ahas-gunawardhana-1266702b3/" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Ahas77" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://web.facebook.com/ahas.gunawardhana" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/___ahas____/" target="_blank" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Typing animation for the name
-    const nameElement = document.querySelector('.hero-content h1 span');
+    const nameElement = document.querySelector('.hero-text h2 span');
     if (nameElement) {
         const text = nameElement.textContent;
         nameElement.textContent = '';
@@ -138,15 +138,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for hero image
-    const heroImage = document.querySelector('.hero-image img');
-    if (heroImage) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            heroImage.style.transform = `translateY(${rate}px) scale(1.05)`;
-        });
-    }
+    // Parallax effect for hero image - REMOVED as requested
+    // const heroImage = document.querySelector('.hero-image img');
+    // if (heroImage) {
+    //     window.addEventListener('scroll', function() {
+    //         const scrolled = window.pageYOffset;
+    //         const rate = scrolled * -0.5;
+    //         heroImage.style.transform = `translateY(${rate}px) scale(1.05)`;
+    //     });
+    // }
 
     // Add loading animation
     window.addEventListener('load', function() {
@@ -188,6 +188,172 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Reinitialize on window resize
     window.addEventListener('resize', createMobileMenu);
+
+    // Contact form functionality
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Basic validation
+            if (!name || !email || !message) {
+                showNotification('Please fill in all fields.', 'error');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            // Simulate form submission (you can replace this with actual email service)
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = `
+                <span>Sending...</span>
+                <svg class="loading-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2a10 10 0 0 1 10 10c0 1.292-.264 2.528-.74 3.65l-1.5-1.5a8 8 0 1 0-8.5 8.5l1.5 1.5A10 10 0 0 1 12 22a10 10 0 0 1 0-20z"/>
+                </svg>
+            `;
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Show success message
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                
+                // Reset form
+                contactForm.reset();
+            }, 2000);
+        });
+    }
+
+    // Notification system
+    function showNotification(message, type = 'info') {
+        // Remove existing notifications
+        const existingNotifications = document.querySelectorAll('.notification');
+        existingNotifications.forEach(notification => notification.remove());
+        
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <span class="notification-message">${message}</span>
+                <button class="notification-close">&times;</button>
+            </div>
+        `;
+        
+        // Add styles
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            max-width: 400px;
+            animation: slideInRight 0.3s ease-out;
+        `;
+        
+        // Add animation keyframes if not already present
+        if (!document.querySelector('#notification-styles')) {
+            const style = document.createElement('style');
+            style.id = 'notification-styles';
+            style.textContent = `
+                @keyframes slideInRight {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes slideOutRight {
+                    from {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    to {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                }
+                
+                .notification-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+                }
+                
+                .notification-close {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    padding: 0;
+                    line-height: 1;
+                }
+                
+                .notification-close:hover {
+                    opacity: 0.8;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Add to page
+        document.body.appendChild(notification);
+        
+        // Close button functionality
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.addEventListener('click', () => {
+            notification.style.animation = 'slideOutRight 0.3s ease-out';
+            setTimeout(() => notification.remove(), 300);
+        });
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.animation = 'slideOutRight 0.3s ease-out';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 5000);
+    }
+
+    // Add hover effects for contact items
+    const contactItems = document.querySelectorAll('.contact-item');
+    contactItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
 });
 
 // Add some CSS for mobile menu (you can add this to your CSS file)
