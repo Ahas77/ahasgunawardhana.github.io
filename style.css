@@ -455,7 +455,7 @@ body.light-mode .download-btn:hover {
     }
     
     .download-cv-container {
-        justify-content: flex-start;
+        justify-content: center;
     }
     
     .image-container {
@@ -486,6 +486,7 @@ body.light-mode .download-btn:hover {
     
     .download-cv-container {
         margin-top: 1rem;
+        justify-content: center;
     }
     
     .image-container {
